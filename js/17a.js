@@ -1,7 +1,7 @@
 const fs = require("fs");
 const input = fs.readFileSync("../data/17.txt", "UTF-8");
 
-const state = [input.split("\n").map(r => r.split(""))];
+const s0 = [input.split("\n").map(r => r.split(""))];
 
 const log = state => {
   const message = state
@@ -106,7 +106,7 @@ const cycle = state => {
   });
 };
 
-const s1 = cycle(state);
+const s1 = cycle(s0);
 const s2 = cycle(s1);
 const s3 = cycle(s2);
 const s4 = cycle(s3);
